@@ -1,0 +1,234 @@
+    // Google Font
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+    // Imports
+    @import "compass";
+    @import "partials/base";
+    @import "partials/typography";
+    @import "partials/colors";
+    @import "partials/layout";
+    @import "partials/animation";
+    /* ==========================================================================
+Navigation Style
+========================================================================== */
+    
+    .navbar-default {
+        background: $Light-primary;
+        margin-bottom: 0;
+        border: none;
+        .navbar-header {
+            width: 28%;
+            padding-right: 15px;
+        }
+        .nav-wrap {
+            width: 50%;
+        }
+        .nav>li>a {
+            font-size: $nav-size;
+            color: $Dark-primary;
+            padding: 35px 15px;
+            @include transition(all .3s ease-in-out);
+        }
+        .nav>li>a:hover,
+        .nav>li>a:focus,
+        .nav>li>a:active {
+            color: $Grey-Primary;
+        }
+        .social-media {
+            i {
+                font-size: $h5-size;
+            }
+            float: right;
+            padding: 0 15px;
+        }
+    }
+    
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover {
+        background: transparent;
+        color: $Grey-Primary;
+    }
+    
+    .top-nav-collapse {
+        background: $section-dark;
+        .nav>li>a {
+            padding: 30px 15px;
+            color: $Light-primary;
+        }
+    }
+    /* ==========================================================================
+Home Style
+========================================================================== */
+    
+    #home {
+        padding: $section-padding;
+        text-align: center;
+        h2 {
+            span {
+                font-weight: $bold;
+            }
+        }
+        img {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+    /* ==========================================================================
+Cowork Style
+========================================================================== */
+    
+    #cowork {
+        background: $section-dark;
+        padding: $section-padding;
+        text-align: center;
+        h2 {
+            color: $Light-primary;
+        }
+        p {
+            color: $Light-primary;
+        }
+        .cowork-box {
+            margin-top: 40px;
+            .col-md-6 {
+                margin-bottom: 20px;
+                padding-right: 30px;
+                vertical-align: baseline;
+                p {
+                    text-align: left;
+                    font-weight: 200;
+                }
+                h3 {
+                    color: $Light-primary;
+                    text-align: left;
+                }
+                span {
+                    font-size: $h2-size;
+                    color: $Light-primary;
+                }
+                .media-left {
+                    padding-right: 30px;
+                }
+                .row {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        iframe {
+            border: none;
+        }
+    }
+    /* ==========================================================================
+Open Source Style
+========================================================================== */
+
+    #open-source {
+        padding: $section-padding;
+        text-align: center;
+        p {
+            margin-bottom: 40px;
+        }
+        a {
+            color: $Dark-primary;
+            display: block;
+            @include transition(all .3s ease-in-out);
+        }
+        a:hover,
+        a:focus,
+        a:active {
+            color: $Grey-Primary;
+            text-decoration: none;
+        }
+        p, h3 {
+            color: inherit;
+        }
+    }
+
+    /* ==========================================================================
+Footer Style
+========================================================================== */
+    
+    footer {
+        text-align: center;
+        .social {
+            margin: 40px 0;
+            a {
+                margin-left: 20px;
+                margin-right: 20px;
+                color: $Dark-primary;
+                @include transition(all .3s ease-in-out);
+            }
+            a:hover,
+            a:focus,
+            a:active {
+                color: $Grey-Primary;
+            }
+        }
+    }
+    /* ==========================================================================
+Media Queries Style
+========================================================================== */
+    
+    @media (max-width: 992px) {
+        /*-- Navigation --*/
+        .navbar-default {
+            background: $section-dark;
+            .navbar-header {
+                width: 100%;
+                padding-right: 0;
+            }
+            .nav-wrap {
+                width: 100%;
+            }
+            .navbar-toggle {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                border: none;
+                .icon-bar {
+                    background-color: $Light-primary;
+                }
+            }
+            .navbar-toggle:hover,
+            .navbar-toggle:focus,
+            .navbar-toggle:active {
+                background: none;
+            }
+            .navbar-left,
+            .navbar-right {
+                float: none !important;
+            }
+            .navbar-toggle {
+                display: block;
+            }
+            .navbar-collapse {
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+            .navbar-collapse.collapse {
+                display: none!important;
+            }
+            .navbar-nav {
+                float: none!important;
+                margin-top: 7.5px;
+            }
+            .navbar-nav>li {
+                float: none;
+            }
+            .nav>li>a {
+                color: $Light-primary;
+            }
+            .collapse.in {
+                display: block !important;
+            }
+        }
+        /*-- Cowork --*/
+        #cowork {
+            h3 {
+                font-size: 22px;
+            }
+        }
+        /*-- section styles --*/
+        section {
+            h2 {
+                font-size: 32px;
+            }
+        }
+    }

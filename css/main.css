@@ -1,0 +1,624 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+/* ==========================================================================
+Global Styles
+========================================================================== */
+/* line 7, ../sass/partials/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 11, ../sass/partials/_base.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #0d0d0d;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #fbfbfb;
+}
+
+/* line 20, ../sass/partials/_base.scss */
+.sep {
+  max-width: 80px;
+  border: 2px solid #0d0d0d;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 27, ../sass/partials/_base.scss */
+.light-sep {
+  max-width: 80px;
+  border: 2px solid #fbfbfb;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 34, ../sass/partials/_base.scss */
+.sectionWrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 40, ../sass/partials/_base.scss */
+.vAlignWrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 45, ../sass/partials/_base.scss */
+.ie7 .sectionWrapper {
+  height: auto;
+  min-height: 100%;
+}
+
+/* ==========================================================================
+Typography
+========================================================================== */
+/* line 23, ../sass/partials/_typography.scss */
+h1 {
+  font-size: 72px;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+}
+
+/* line 30, ../sass/partials/_typography.scss */
+h2 {
+  font-size: 36px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* line 37, ../sass/partials/_typography.scss */
+h3 {
+  font-size: 26px;
+  color: #000;
+  font-weight: 400;
+}
+
+/* line 43, ../sass/partials/_typography.scss */
+h4 {
+  font-size: 24px;
+  color: #000;
+  font-weight: 400;
+}
+
+/* line 49, ../sass/partials/_typography.scss */
+h5 {
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+}
+
+/* line 55, ../sass/partials/_typography.scss */
+h6 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* line 62, ../sass/partials/_typography.scss */
+p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+Layout 
+========================================================================== */
+/* line 1, ../sass/partials/_animation.scss */
+.animation {
+  padding: 50px 0;
+}
+
+/* line 5, ../sass/partials/_animation.scss */
+.balls {
+  width: 210px;
+  height: 40px;
+  margin: 50px auto 0;
+}
+
+/* line 11, ../sass/partials/_animation.scss */
+.ball {
+  width: 10px;
+  height: 10px;
+  margin: auto 10px;
+  border-radius: 50px;
+  position: relative;
+  float: left;
+}
+
+/* line 20, ../sass/partials/_animation.scss */
+.ball:nth-child(2n) {
+  -webkit-animation: top 1.1s infinite ease-in-out;
+  -moz-animation: top 1.1s infinite ease-in-out;
+  animation: top 1.1s infinite ease-in-out;
+}
+
+/* line 26, ../sass/partials/_animation.scss */
+.ball:nth-child(2n+1) {
+  -webkit-animation: bottom 1s infinite ease-in-out;
+  -moz-animation: bottom 1s infinite ease-in-out;
+  animation: bottom 1s infinite ease-in-out;
+}
+
+/* line 32, ../sass/partials/_animation.scss */
+.ball:nth-child(1) {
+  background: #d47a9c;
+}
+
+/* line 36, ../sass/partials/_animation.scss */
+.ball:nth-child(2) {
+  background: #68c997;
+}
+
+/* line 40, ../sass/partials/_animation.scss */
+.ball:nth-child(3) {
+  background: #63C1CE;
+}
+
+/* line 44, ../sass/partials/_animation.scss */
+.ball:nth-child(4) {
+  background: #c3b066;
+}
+
+/* line 48, ../sass/partials/_animation.scss */
+.ball:nth-child(5) {
+  background: #698bd2;
+}
+
+/* line 52, ../sass/partials/_animation.scss */
+.ball:nth-child(6) {
+  background: #ce845f;
+}
+
+/* line 56, ../sass/partials/_animation.scss */
+.ball:nth-child(7) {
+  background: #a165da;
+}
+
+/* line 61, ../sass/partials/_animation.scss */
+.rackets {
+  width: 210px;
+  height: 6px;
+  margin: 0 auto;
+}
+
+/* line 67, ../sass/partials/_animation.scss */
+.racket {
+  width: 60px;
+  height: 6px;
+  position: relative;
+  float: left;
+  margin: 0 20px;
+  background-color: #b9b9b9;
+  border-radius: 50px;
+}
+
+/* line 77, ../sass/partials/_animation.scss */
+.racket:nth-child(2n) {
+  -webkit-animation: right 0.8s infinite ease-in-out;
+  -moz-animation: right 0.8s infinite ease-in-out;
+  animation: right 0.8s infinite ease-in-out;
+}
+
+/* line 83, ../sass/partials/_animation.scss */
+.racket:nth-child(2n+1) {
+  -webkit-animation: left 0.9s infinite ease-in-out;
+  -moz-animation: left 0.9s infinite ease-in-out;
+  animation: left 0.9s infinite ease-in-out;
+}
+
+@-webkit-keyframes right {
+  0% {
+    -webkit-transform: translate(-30px);
+  }
+  50% {
+    -webkit-transform: translate(30px);
+  }
+  100% {
+    -webkit-transform: translate(-30px);
+  }
+}
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: translate(30px);
+  }
+  50% {
+    -webkit-transform: translate(-30px);
+  }
+  100% {
+    -webkit-transform: translate(30px);
+  }
+}
+@-webkit-keyframes top {
+  0% {
+    -webkit-transform: translate(0, -30px);
+  }
+  50% {
+    -webkit-transform: translate(0, 30px);
+  }
+  100% {
+    -webkit-transform: translate(0, -30px);
+  }
+}
+@-webkit-keyframes bottom {
+  0% {
+    -webkit-transform: translate(0, 30px);
+  }
+  50% {
+    -webkit-transform: translate(0, -30px);
+  }
+  100% {
+    -webkit-transform: translate(0, 30px);
+  }
+}
+@-moz-keyframes right {
+  0% {
+    -moz-transform: translate(-30px);
+  }
+  50% {
+    -moz-transform: translate(30px);
+  }
+  100% {
+    -moz-transform: translate(-30px);
+  }
+}
+@-moz-keyframes left {
+  0% {
+    -moz-transform: translate(30px);
+  }
+  50% {
+    -moz-transform: translate(-30px);
+  }
+  100% {
+    -moz-transform: translate(30px);
+  }
+}
+@-moz-keyframes top {
+  0% {
+    -moz-transform: translate(0, -30px);
+  }
+  50% {
+    -moz-transform: translate(0, 30px);
+  }
+  100% {
+    -moz-transform: translate(0, -30px);
+  }
+}
+@-moz-keyframes bottom {
+  0% {
+    -moz-transform: translate(0, 30px);
+  }
+  50% {
+    -moz-transform: translate(0, -30px);
+  }
+  100% {
+    -moz-transform: translate(0, 30px);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translate(-30px);
+  }
+  50% {
+    transform: translate(30px);
+  }
+  100% {
+    transform: translate(-30px);
+  }
+}
+@keyframes left {
+  0% {
+    transform: translate(30px);
+  }
+  50% {
+    transform: translate(-30px);
+  }
+  100% {
+    transform: translate(30px);
+  }
+}
+@keyframes top {
+  0% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, -30px);
+  }
+}
+@keyframes bottom {
+  0% {
+    transform: translate(0, 30px);
+  }
+  50% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0, 30px);
+  }
+}
+    /* ==========================================================================
+Navigation Style
+========================================================================== */
+/* line 14, ../sass/main.scss */
+.navbar-default {
+  background: #fbfbfb;
+  margin-bottom: 0;
+  border: none;
+}
+/* line 18, ../sass/main.scss */
+.navbar-default .navbar-header {
+  width: 28%;
+  padding-right: 15px;
+}
+/* line 22, ../sass/main.scss */
+.navbar-default .nav-wrap {
+  width: 50%;
+}
+/* line 25, ../sass/main.scss */
+.navbar-default .nav > li > a {
+  font-size: 14px;
+  color: #0d0d0d;
+  padding: 35px 15px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 31, ../sass/main.scss */
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus,
+.navbar-default .nav > li > a:active {
+  color: #a3a3a3;
+}
+/* line 36, ../sass/main.scss */
+.navbar-default .social-media {
+  float: right;
+  padding: 0 15px;
+}
+/* line 37, ../sass/main.scss */
+.navbar-default .social-media i {
+  font-size: 22px;
+}
+
+/* line 45, ../sass/main.scss */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  background: transparent;
+  color: #a3a3a3;
+}
+
+/* line 52, ../sass/main.scss */
+.top-nav-collapse {
+  background: #24242a;
+}
+/* line 54, ../sass/main.scss */
+.top-nav-collapse .nav > li > a {
+  padding: 30px 15px;
+  color: #fbfbfb;
+}
+
+    /* ==========================================================================
+Home Style
+========================================================================== */
+/* line 63, ../sass/main.scss */
+#home {
+  padding: 150px 0;
+  text-align: center;
+}
+/* line 67, ../sass/main.scss */
+#home h2 span {
+  font-weight: 700;
+}
+/* line 71, ../sass/main.scss */
+#home img {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+    /* ==========================================================================
+Cowork Style
+========================================================================== */
+/* line 80, ../sass/main.scss */
+#cowork {
+  background: #24242a;
+  padding: 150px 0;
+  text-align: center;
+}
+/* line 84, ../sass/main.scss */
+#cowork h2 {
+  color: #fbfbfb;
+}
+/* line 87, ../sass/main.scss */
+#cowork p {
+  color: #fbfbfb;
+}
+/* line 90, ../sass/main.scss */
+#cowork .cowork-box {
+  margin-top: 40px;
+}
+/* line 92, ../sass/main.scss */
+#cowork .cowork-box .col-md-6 {
+  margin-bottom: 20px;
+  padding-right: 30px;
+  vertical-align: baseline;
+}
+/* line 96, ../sass/main.scss */
+#cowork .cowork-box .col-md-6 p {
+  text-align: left;
+  font-weight: 200;
+}
+/* line 100, ../sass/main.scss */
+#cowork .cowork-box .col-md-6 h3 {
+  color: #fbfbfb;
+  text-align: left;
+}
+/* line 104, ../sass/main.scss */
+#cowork .cowork-box .col-md-6 span {
+  font-size: 36px;
+  color: #fbfbfb;
+}
+/* line 108, ../sass/main.scss */
+#cowork .cowork-box .col-md-6 .media-left {
+  padding-right: 30px;
+}
+/* line 111, ../sass/main.scss */
+#cowork .cowork-box .col-md-6 .row {
+  margin-bottom: 30px;
+}
+/* line 116, ../sass/main.scss */
+#cowork iframe {
+  border: none;
+}
+
+    /* ==========================================================================
+Open Source Style
+========================================================================== */
+/* line 124, ../sass/main.scss */
+#open-source {
+  padding: 150px 0;
+  text-align: center;
+}
+/* line 127, ../sass/main.scss */
+#open-source p {
+  margin-bottom: 40px;
+}
+/* line 130, ../sass/main.scss */
+#open-source a {
+  color: #0d0d0d;
+  display: block;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 135, ../sass/main.scss */
+#open-source a:hover,
+#open-source a:focus,
+#open-source a:active {
+  color: #a3a3a3;
+  text-decoration: none;
+}
+/* line 141, ../sass/main.scss */
+#open-source p, #open-source h3 {
+  color: inherit;
+}
+
+    /* ==========================================================================
+Footer Style
+========================================================================== */
+/* line 150, ../sass/main.scss */
+footer {
+  text-align: center;
+}
+/* line 152, ../sass/main.scss */
+footer .social {
+  margin: 40px 0;
+}
+/* line 154, ../sass/main.scss */
+footer .social a {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #0d0d0d;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 160, ../sass/main.scss */
+footer .social a:hover,
+footer .social a:focus,
+footer .social a:active {
+  color: #a3a3a3;
+}
+
+    /* ==========================================================================
+Media Queries Style
+========================================================================== */
+@media (max-width: 992px) {
+  /*-- Navigation --*/
+  /* line 173, ../sass/main.scss */
+  .navbar-default {
+    background: #24242a;
+  }
+  /* line 175, ../sass/main.scss */
+  .navbar-default .navbar-header {
+    width: 100%;
+    padding-right: 0;
+  }
+  /* line 179, ../sass/main.scss */
+  .navbar-default .nav-wrap {
+    width: 100%;
+  }
+  /* line 182, ../sass/main.scss */
+  .navbar-default .navbar-toggle {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: none;
+  }
+  /* line 186, ../sass/main.scss */
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fbfbfb;
+  }
+  /* line 190, ../sass/main.scss */
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:active {
+    background: none;
+  }
+  /* line 195, ../sass/main.scss */
+  .navbar-default .navbar-left,
+  .navbar-default .navbar-right {
+    float: none !important;
+  }
+  /* line 199, ../sass/main.scss */
+  .navbar-default .navbar-toggle {
+    display: block;
+  }
+  /* line 202, ../sass/main.scss */
+  .navbar-default .navbar-collapse {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  /* line 205, ../sass/main.scss */
+  .navbar-default .navbar-collapse.collapse {
+    display: none !important;
+  }
+  /* line 208, ../sass/main.scss */
+  .navbar-default .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  /* line 212, ../sass/main.scss */
+  .navbar-default .navbar-nav > li {
+    float: none;
+  }
+  /* line 215, ../sass/main.scss */
+  .navbar-default .nav > li > a {
+    color: #fbfbfb;
+  }
+  /* line 218, ../sass/main.scss */
+  .navbar-default .collapse.in {
+    display: block !important;
+  }
+
+  /*-- Cowork --*/
+  /* line 224, ../sass/main.scss */
+  #cowork h3 {
+    font-size: 22px;
+  }
+
+  /*-- section styles --*/
+  /* line 230, ../sass/main.scss */
+  section h2 {
+    font-size: 32px;
+  }
+}
